@@ -1,0 +1,40 @@
+{
+  "films": [
+    {
+      "title": "The Lord of the Rings",
+      "director": "Peter Jackson",
+      "year": "2001",
+      "id": "1"
+    },
+    {
+      "title": "Star Wars",
+      "director": "George Lucas",
+      "year": "2000",
+      "id": "2"
+    },
+    {
+      "title": "Star Wars",
+      "director": "George Lucas",
+      "year": "2000",
+      "id": "3"
+    },
+    {
+      "title": "Fight Club",
+      "director": "David Fincher",
+      "year": "1999",
+      "id": "4"
+    },
+    {
+      "id": "1e63",
+      "title": "Spirited Away",
+      "director": "Hayao Miyazaki",
+      "year": 2001
+    },
+    {
+      "id": "b508",
+      "title": "Titanic",
+      "director": "James Cameron",
+      "year": 1997
+    }
+  ]
+}
