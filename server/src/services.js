@@ -111,6 +111,7 @@ async function updateOrEditFilms(id) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                id: id,
                 title: title,
                 director: director,
                 year: year
@@ -137,24 +138,24 @@ document.getElementById('loadContentButton').addEventListener('click', printFilm
 // function deleteFilm(){
     
 async function deleteFilm(id) {
-    try {
-        
-        let response = await fetch(`http://localhost:3000/films/${id}`, {
-            method: 'DELETE',
-        });
+    if (confirm('Are you sure you want to delete this movie?')) {
+        try {
+            let response = await fetch(`http://localhost:3000/films/${id}`, {
+                method: 'DELETE',
+            });
 
-        if (response.ok) {
-            alert('Are you sure you want to delete this movie?');
-            console.log(`Película con ID ${id} eliminada exitosamente`);
-            printFilms();
-            
-        } else {
-            console.log(`Error al eliminar la película con ID ${id}`);
+            if (response.ok) {
+                console.log(`Película con ID ${id} eliminada exitosamente`);
+                printFilms();
+            } else {
+                console.log(`Error al eliminar la película con ID ${id}`);
+            }
+        } catch (error) {
+            console.log("Error al eliminar la película", error);
         }
-    } catch (error) {
-        console.log("Error al eliminar la película", error);
     }
 }
+
 
     
 // }
@@ -197,3 +198,5 @@ async function printFilms() {
 
 
 document.getElementById('loadContentButton').addEventListener('click', printFilms);
+
+

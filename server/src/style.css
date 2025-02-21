@@ -13,6 +13,14 @@ body{
     margin-right: auto;
 }
 
+.th{
+    font-size: 30px;
+}
+
+#films-table {
+    background-color: rgb(243, 246, 248);
+}
+
 input[type="submit"], button {
     margin: 20px;
 }
@@ -26,5 +34,16 @@ input[type="submit"], button {
 label {
     display: flex;
     justify-content: space-between;
+    background-color: seashell;
     
 }
+
+.btn-add{
+    background-color: rgb(191, 229, 241);
+  
+   
+    
+}
+
+
+    
